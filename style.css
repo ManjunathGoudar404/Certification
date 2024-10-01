@@ -42,19 +42,19 @@ body {
 
     .container {
 
-        width: calc(1000px*0.75);
-        height: calc(650px*0.75);
+        width: calc(1000px*0.7);
+        height: calc(650px*0.7);
 
     }
 
     .container .slide .item {
-        width: calc(300px*0.75);
-        height: calc(200px*0.75);
+        width: calc(300px*0.7);
+        height: calc(200px*0.7);
 
     }
 
     .slide .item:nth-child(3) {
-        left: 50%*0.75;
+        left: calc(50*(50%*0.7));
     }
 
     .slide .item:nth-child(4) {
@@ -72,41 +72,9 @@ body {
     }
 }
 
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: 599px) {
 
     /* Even smaller screens */
-    .container {
-
-        width: calc(1000px*0.45);
-        height: calc(650px*0.45);
-
-    }
-
-    .container .slide .item {
-        width: calc(300px*0.45);
-        height: calc(200px*0.45);
-
-    }
-
-    .slide .item:nth-child(3) {
-        left: 50%*0.4;
-    }
-
-    .slide .item:nth-child(4) {
-        left: calc(50%*0.4 + 220px*0.45);
-    }
-
-    .slide .item:nth-child(5) {
-        left: calc(50%*0.4 + 440px*0.45);
-    }
-
-    /* here n = 0, 1, 2, 3,... */
-    .slide .item:nth-child(n + 6) {
-        left: calc(50%*0.4 + 660px*0.45);
-        opacity: 0;
-    }
-}
-@media only screen and (max-width: 456px) {
     .container {
 
         width: calc(1000px*0.4);
@@ -118,11 +86,10 @@ body {
         width: calc(300px*0.4);
         height: calc(200px*0.4);
 
-
     }
 
     .slide .item:nth-child(3) {
-        left: 50%*0.4;
+        left: calc((50%*0.4)+50%);
     }
 
     .slide .item:nth-child(4) {
@@ -139,12 +106,45 @@ body {
         opacity: 0;
     }
 }
+@media only screen and (max-width: 456px) {
+    .container {
+
+        width: calc(1000px*0.35);
+        height: calc(650px*0.35);
+
+    }
+
+    .container .slide .item {
+        width: calc(300px*0.35);
+        height: calc(200px*0.35);
+
+
+    }
+
+    .slide .item:nth-child(3) {
+        left: calc(50+(50%*0.3.5));
+    }
+
+    .slide .item:nth-child(4) {
+        left: calc(50%*0.4 + 220px*0.3.5);
+    }
+
+    .slide .item:nth-child(5) {
+        left: calc(50%*0.4 + 440px*0.3.5);
+    }
+
+    /* here n = 0, 1, 2, 3,... */
+    .slide .item:nth-child(n + 6) {
+        left: calc(50%*0.4 + 660px*0.3.5);
+        opacity: 0;
+    }
+}
 
 @media only screen and (max-width: 256px) {
     .container {
 
         width: calc(1000px*0.2);
-        height: calc(650px*1);
+        height: calc(650px*0.2);
 
     }
 
@@ -156,7 +156,7 @@ body {
     }
 
     .slide .item:nth-child(3) {
-        left: 50%;
+        left:calc(50%+(50%*0.2));
     }
 
     .slide .item:nth-child(4) {
